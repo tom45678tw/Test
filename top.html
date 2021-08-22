@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+    <script src="bootstrap5/js/bootstrap.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="bootstrap5/js/popper.min.js"></script> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <link href="stylesheets/jquery-ui/ui-lightness/jquery-ui.css" rel="stylesheet" /> -->
+    <title>Document</title>
+    <style>
+      
+
+
+        h1 {
+            border-radius: 1%;
+            font-size: 1.5rem;
+        
+             color:rgb(255,255,255)
+        }
+
+        
+     
+    </style>
+     <script>
+        $( function() {
+          var dialog1 = $("<div></div>").load('BiologicalClock.html #div1').dialog({
+                      width: 350, modal: true, autoOpen: false, title: '補發驗證信',
+                      
+                      // buttons: [{ text: '確定', click: function () { $(this).dialog('close') } }]
+                  });
+                  $(".green_box  .read_more a").click(function () {
+                      $(this).blur();
+                      dialog1.dialog('open');
+                      return false;
+                  });
+        } );
+        </script>s
+</head>
+
+<body>
+    <div class="container mt-5 ">
+        <div class="row g-5">
+
+            <div class="col-6 col-md-3 offset-2 border border-1  pb-4  pt-0 px-0   " style="width: 330px;  border-radius: 0.5em;">
+                <div class="mb-3 pt-2" style="height: 50px; background-color: rgb(73,188,215);  border-radius: 0.5em 0.5em 0% 0%; ">
+                <h1 class="mb-3  w-100 ps-3 fw-bold" >註冊成為會員</h1>
+                </div>
+                <form action="" class="px-3" data-toggle="validator">
+                    <div class="form-group ">
+                        <input type="email" class="form-control mb-3   " style="border-radius: 0.5em;" placeholder="Email 帳號"
+                            name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control  mb-3"style="border-radius: 0.5em;"  placeholder="姓名/暱稱" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control  mb-3"style="border-radius: 0.5em;"  placeholder="行動電話" name="phone"
+                            pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control  mb-3" id="password" placeholder="密碼" style="border-radius: 0.5em;" name="password"
+                            minlength="8" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control  mb-3" data-match="#password" placeholder="確認密碼" style="border-radius: 0.5em;" minlength="8"required >
+                    </div>
+        
+                    <div class="g-recaptcha mb-3 " data-sitekey="6LdJMhkcAAAAABp2NZYWiVvOllKy-IdpTqZAdlfa"></div>
+                    <button class="btn   w-100 btn-lg fw-bold" style="  background-color: rgb(73,188,215); color: rgb(255,255,255); border-radius: 0.5em;
+                 height: 45px;">送出</button>
+                </form>
+            </div>
+
+
+            <div class="col-6 col-md-3 border border-1 px-0   " style="width: 300px;  border-radius: 0.5em;
+            height: 300px;
+            margin-left: 50px;">
+                   <div class="mb-3 pt-2" style="height: 50px; background-color: rgb(181,213,106);   border-radius: 0.5em 0.5em 0% 0%; ">
+                 <h1 class="mb-3  w-100 ps-3 fw-bold ">會員登入</h1>
+                  </div>
+                <form action="" class="px-3">
+                    <div class="form-group">
+                        <input type="email" class="form-control  mb-3" style="border-radius: 0.5em;" placeholder="Email 帳號" name="email" required>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control  mb-3" style="border-radius: 0.5em;" placeholder="姓名/暱稱" name="name" required>
+
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">記住帳號</label>
+                    </div>
+                    <button class="btn   w-100 btn-lg fw-bold" style="  background-color: rgb(181,213,106); color: rgb(255,255,255); border-radius: 0.5em;
+                    height: 45px;">送出</button>
+                    <!-- <a href="" class="  text-danger "  style="padding-left: 101px;">忘記密碼</a> -->
+                    <div class="green_box">  
+                        <div class="read_more"><a href="#" style="padding-left: 101px;" class="  text-danger " title="查看詳細內容">忘記密碼</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
